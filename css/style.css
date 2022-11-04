@@ -1,0 +1,105 @@
+body {
+  font-family: sans-serif;
+}
+.mavic,
+.dog {
+  width: 600px;
+  height: 400px;
+  background-color: aquamarine;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 50px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.mavic-title {
+  position: absolute;
+  top: 10px;
+  left: 450px;
+  font-size: 20px;
+  font-family: sans-serif;
+  color: white;
+}
+.mavic-img {
+  transition: all 0.5s;
+}
+
+.mavic:hover .mavic-img {
+  transform: translateY(-300%);
+}
+
+.mavic::after,
+.mavic::before {
+  content: "";
+  width: 550px;
+  height: 450px;
+  position: absolute;
+}
+
+.mavic::after {
+  background-image: url("../img/box.png");
+  margin-top: 200px;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  right: 7%;
+  transform: translate(0, 0) rotate(0deg);
+  visibility: hidden;
+}
+
+.mavic::before {
+  background-image: url("../img/meds.png");
+  margin-top: 310px;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  left: 43%;
+  transform: translate(-30%, 0) rotate(0deg);
+  visibility: hidden;
+}
+
+.mavic:hover::after {
+  transform: translate(0, 0) rotate(-20deg);
+  transition: all 0.5s;
+  visibility: visible;
+  transition: all 0.5s ease;
+  visibility: visible;
+}
+
+.mavic:hover::before {
+  transform: translate(0, 0) rotate(20deg);
+  transition: all 0.5s;
+  visibility: visible;
+}
+
+.buy {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.buy button {
+  width: 200px;
+  height: 100px;
+  background-color: rgb(35, 180, 132);
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: 30px;
+  color: aliceblue;
+}
+.buy button:hover {
+  cursor: pointer;
+  width: 190px;
+  height: 90px;
+  font-size: 27px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 5px;
+  transition: all 0.2s;
+}
+.catButton:hover {
+  background-color: rgb(25, 105, 78);
+}
